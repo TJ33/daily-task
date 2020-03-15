@@ -19,9 +19,8 @@ public class DailyApi {
         Date today = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
         String time = simpleDateFormat.format(today);
-        System.out.println("日常时间================================"+time);
-        if(time.equals("00:00:00")){
-            System.out.println("time到了================================"+time);
+        System.out.println("time---------------------------"+time);
+        if(time.equals("04:00:00")){
             for(int i = 1; i<7; i++){
                 //签到
                 JSONObject check = this.dailyTask("https://starmicro.happyelements.cn/v1/assist/check-in","idol_id="+i,"GET");
@@ -58,7 +57,6 @@ public class DailyApi {
                 System.out.println("关注2个用户4"+followUserFour+"歌姬id="+i);
             }
         }
-
     }
 
     //自动签到打卡

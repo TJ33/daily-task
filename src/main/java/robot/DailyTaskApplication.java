@@ -15,7 +15,7 @@ public class DailyTaskApplication {
         JobDetail jobDetail = JobBuilder.newJob(MyJob.class).withIdentity("job1", "group1").build();
         //创建触发器 每10秒钟执行一次
         Trigger trigger = TriggerBuilder.newTrigger().withIdentity("trigger1", "group3")
-                .withSchedule(SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(1).repeatForever())
+                .withSchedule(SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(60).repeatForever())
                 .build();
         //创建调度器
         SchedulerFactory schedulerFactory = new StdSchedulerFactory();
