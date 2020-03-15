@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class DailyTaskApplication {
 
     public static void main(String[] args) throws SQLException, SchedulerException {
-        //////////////////////////////////////////////////轮询使用//////////////////////////////////////////////////////
+        ///轮询方法  定时执行 一秒一次
         //创建任务
         JobDetail jobDetail = JobBuilder.newJob(MyJob.class).withIdentity("job1", "group1").build();
         //创建触发器 每10秒钟执行一次
