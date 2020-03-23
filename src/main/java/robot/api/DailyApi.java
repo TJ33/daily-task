@@ -20,7 +20,7 @@ public class DailyApi {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
         String time = simpleDateFormat.format(today);
         System.out.println("time---------------------------"+time);
-        if(time.equals("04:00:00")){
+        if(time.equals("00:00:00")){
             for(int i = 1; i<7; i++){
                 //签到
                 JSONObject check = this.dailyTask("https://starmicro.happyelements.cn/v1/assist/check-in","idol_id="+i,"GET");
