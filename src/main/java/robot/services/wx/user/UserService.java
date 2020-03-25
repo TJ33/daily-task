@@ -12,7 +12,7 @@ public class UserService {
     private UserMapper userMapper;
 
     public WXUser getWXUser(){
-        System.out.println("SSSS");
+        System.out.println("SSSSS");
         return new WXUser();
     }
 
